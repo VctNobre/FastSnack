@@ -9,7 +9,7 @@ import { auth } from "../src/firebase.config";
 
 export default function ReplacePass(){
 
-    const [userMail, setUserMail] = useState('');
+    const [userMail, setUserMail] = useState();
     const router = useRouter();
 
     function replacePass(){

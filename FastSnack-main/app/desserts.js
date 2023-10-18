@@ -1,11 +1,10 @@
-import {View, StyleSheet, Image, TouchableOpacity} from "react-native";
+import {View, StyleSheet,  TouchableOpacity} from "react-native";
 import Texto from "../src/components/texto";
 import { useRouter } from "expo-router";
 import {auth} from "../src/firebase.config";
 import { signOut } from "firebase/auth";
 import { MaterialIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
-import { ScrollView } from "react-native-gesture-handler";
 
 
 export default function Home (){
@@ -31,44 +30,13 @@ export default function Home (){
         })
     }
 
-    
     function home(){
       router.replace('/home');
     }
 
     function cart(){
-      router.replace('/cart');
-    }
-
-     {/* comidas primeira fila*/}
-
-     function coffees(){
-      router.replace('coffees')
-     }
-
-     function candys(){
-      router.replace('candys')
-     }
-
-     function desserts(){
-      router.replace('desserts')
-     }
-
-
-     {/* comidas segunda fila*/}
-    function drinks(){
-      router.replace('/drinks')
- 
-    }
-
-    function savorySnacks(){
-      router.replace('/savorySnacks')
-    }
-
-    function specials(){
-      router.replace('/specials')
-    } 
-
+        router.replace('/cart');
+      }
 
     return(
         <View style={styles.container}>
@@ -83,39 +51,10 @@ export default function Home (){
                 
           </View>          
         </View>
-      
-        <View style={styles.botoesContainer}>
-          <View style={styles.botoesEsquerdo}>
-            <TouchableOpacity style={styles.botaoDoce} onPress={coffees}>
-              <Image source={require('../src/images/imagem_doce1.jpeg')} style={styles.botaoDoceImage} />
-              {/* café */}
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.botaoDoce} onPress={candys}>
-              <Image source={require('../src/images/imagem_doce2.jpeg')} style={styles.botaoDoceImage} />
-              {/* doces */}
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.botaoDoce} onPress={desserts}>
-              <Image source={require('../src/images/imagem_doce3.jpeg')} style={styles.botaoDoceImage} />
-              {/* sobremesas */}
-            </TouchableOpacity>
-          </View>
-          <View style={styles.botoesDireito}>
-            <TouchableOpacity style={styles.botaoDoce} onPress={drinks}>
-              <Image source={require('../src/images/imagem_doce4.jpeg')} style={styles.botaoDoceImage} />  
-              {/* bebidas */}
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.botaoDoce} onPress={savorySnacks}>
-              <Image source={require('../src/images/imagem_doce5.jpeg')} style={styles.botaoDoceImage} />
-              {/* salgados */}
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.botaoDoce} onPress={specials}>
-              <Image source={require('../src/images/imagem_doce6.jpeg')} style={styles.botaoDoceImage} />
-              {/* especiais */}
-            </TouchableOpacity>
-          </View>
-        </View>
-
-      
+  
+       
+    
+  
         <View style={styles.rodape}>
           <View>
             <TouchableOpacity style={styles.icone} onPress={home}>
@@ -176,7 +115,8 @@ const styles = StyleSheet.create({
       fontSize: 30,
       color: 'black',
       fontWeight: 'bold',
-     
+      
+      
     },
     botoesContainer: {
       flexDirection: 'row',
@@ -231,8 +171,9 @@ const styles = StyleSheet.create({
     dist:{
       flexDirection:'row-reverse',
       alignItems:'center',
-      marginRight: 10,     
-      gap:90
+      marginRight: 10,
+      
+      gap:100
     }
    
     
