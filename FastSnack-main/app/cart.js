@@ -50,6 +50,25 @@ export default function Home (){
   
        
     
+      <View style={styles.menu}>
+        <View style={styles.menuIcons}>
+          <TouchableOpacity>
+            {/* Ícone de usuário */}
+            <Text style={styles.icon}>Usuário</Text>
+          </TouchableOpacity>
+        </View>
+        <Text style={styles.title}>EatSmart</Text>
+      </View>
+
+      <View style={styles.cartContainer}>
+        <View style={styles.cartBody}>
+          {/* Conteúdo do carrinho de compras */}
+        </View>
+
+
+
+
+
   
         <View style={styles.rodape}>
           <View>

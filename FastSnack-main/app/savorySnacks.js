@@ -56,7 +56,7 @@ export default function Home (){
   
        
      {/* meio */}
-     
+
       <ScrollView>
         <View style={styles.botoesContainer}>
           <View style={styles.botoesEsquerdo}>
